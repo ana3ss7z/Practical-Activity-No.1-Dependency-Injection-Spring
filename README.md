@@ -1,15 +1,16 @@
-Voici un **petit rapport synthétique** pour le TP demandé :
+**Nom et Prénom :** ZBIR Anass
+
+**Filière :** Master SDIA S2
 
 ---
+##  Rapport du TP N°1— Injection de dépendances et couplage faible en Java
 
-## 📝 Rapport du TP — Injection de dépendances et couplage faible en Java
-
-### 🎯 Objectif :
+###  Objectif :
 Mettre en œuvre le principe de **couplage faible** en Java en utilisant des interfaces, des implémentations concrètes, et différentes méthodes d’injection de dépendances (manuelles et via Spring).
 
 ---
 
-### ✅ Partie 1 : Étapes de réalisation
+###  Partie 1 : Étapes de réalisation
 
 #### 1. Création de l’interface `IDao`
 Nous avons défini une interface `IDao` contenant la méthode suivante :
@@ -70,7 +71,7 @@ Cela permet un **couplage faible**, car `MetierImpl` dépend de l’interface `I
 
 ---
 
-### 🔧 Partie 2 : Méthodes d'injection de dépendances
+###  Partie 2 : Méthodes d'injection de dépendances
 
 #### a. Injection statique (manuelle)
 Dans une classe `Pres1`, les dépendances sont créées et injectées manuellement :
@@ -111,7 +112,7 @@ Cette méthode permet de **changer la dépendance sans modifier le code source**
 #### c. Injection avec le Framework Spring
 
 ##### ➤ Version XML
-Définition des beans dans un fichier `applicationContext.xml` :
+Définition des beans dans un fichier `config.xml` :
 ```xml
     <bean id="d" class="net.anass.dao.DaoImpl"></bean>
     <bean id="metier" class="net.anass.metier.MetierImpl">
@@ -149,7 +150,7 @@ Avec scan des packages dans `applicationContext.xml` ou via `@SpringBootApplicat
         System.out.print("RES= "+ metier.Calcul());
 ```
 
-### ✅ Conclusion
+###  Conclusion
 
 Ce TP a permis de comprendre :
 - La différence entre couplage fort et couplage faible
