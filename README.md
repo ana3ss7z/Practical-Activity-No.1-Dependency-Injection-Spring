@@ -132,7 +132,6 @@ Utilisation des annotations `@Component`, `@Autowired` :
 @Component
 public class DaoImpl implements IDao { ... }
 
-@Component
 
 @Component("metier")
 public class MetierImpl implements IMetier {
